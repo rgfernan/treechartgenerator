@@ -16,23 +16,441 @@
     $(function() {
 
     var datasource = {
-      'name': 'Lao Lao',
-      'title': 'general manager',
-      'children': [
-        { 'name': 'Bo Miao', 'title': 'department manager' },
-        { 'name': 'Su Miao', 'title': 'department manager',
-          'children': [
-            { 'name': 'Tie Hua', 'title': 'senior engineer' },
-            { 'name': 'Hei Hei', 'title': 'senior engineer',
-              'children': [
-                { 'name': 'Dan Dan', 'title': 'engineer' }
-              ]
-            },
-            { 'name': 'Pang Pang', 'title': 'senior engineer' }
-          ]
-        },
-        { 'name': 'Hong Miao', 'title': 'department manager' }
-      ]
+     
+  children: [{
+  children: [{
+  children: [],
+  Id: 28,
+  name: "CHKT",
+  Parent: 2
+}, {
+  children: [],
+  Id: 57,
+  name: "ECE",
+  Parent: 2
+}, {
+  children: [],
+  Id: 114,
+  name: "SDPM",
+  Parent: 2
+}, {
+  children: [],
+  Id: 133,
+  name: "SIMF",
+  Parent: 2
+}, {
+  children: [],
+  Id: 134,
+  name: "SIMOC",
+  Parent: 2
+}, {
+  children: [],
+  Id: 137,
+  name: "SINOLAVE",
+  Parent: 2
+}, {
+  children: [],
+  Id: 143,
+  name: "SIPSI",
+  Parent: 2
+}, {
+  children: [],
+  Id: 156,
+  name: "SOPST",
+  Parent: 2
+}, {
+  children: [],
+  Id: 160,
+  name: "STIGI",
+  Parent: 2
+}, {
+  children: [],
+  Id: 178,
+  name: "TSPI",
+  Parent: 2
+}, {
+  children: [],
+  Id: 181,
+  name: "CMD",
+  Parent: 2
+}],
+  Id: 2,
+  name: "Acceder Unificado",
+  Parent: 19
+}, {
+  children: [],
+  Id: 3,
+  name: "CDA CURP",
+  Parent: 19
+}, {
+  children: [],
+  Id: 5,
+  name: "ADMIN SSO",
+  Parent: 19
+}, {
+  children: [],
+  Id: 7,
+  name: "ADO IMSS Digital",
+  Parent: 19
+}, {
+  children: [],
+  Id: 8,
+  name: "ALTAPPF CURP",
+  Parent: 19
+}, {
+  children: [],
+  Id: 10,
+  name: "AltaPM IMSS Digital",
+  Parent: 19
+}, {
+  children: [],
+  Id: 11,
+  name: "AltaPPF IMSS Digital",
+  Parent: 19
+}, {
+  children: [],
+  Id: 15,
+  name: "AsigNSS",
+  Parent: 19
+}, {
+  children: [],
+  Id: 22,
+  name: "CDA",
+  Parent: 19
+}, {
+  children: [],
+  Id: 40,
+  name: "CRIIP",
+  Parent: 19
+}, {
+  children: [],
+  Id: 42,
+  name: "CSI",
+  Parent: 19
+}, {
+  children: [],
+  Id: 76,
+  name: "MAC II IMSS DIGITAL",
+  Parent: 19
+}, {
+  children: [],
+  Id: 79,
+  name: "MPEC",
+  Parent: 19
+}, {
+  children: [],
+  Id: 82,
+  name: "NEE",
+  Parent: 19
+}, {
+  children: [],
+  Id: 101,
+  name: "RODEPC WEB",
+  Parent: 19
+}, {
+  children: [],
+  Id: 102,
+  name: "RTT",
+  Parent: 19
+}, {
+  children: [],
+  Id: 109,
+  name: "SATIC",
+  Parent: 19
+}, {
+  children: [],
+  Id: 110,
+  name: "SCAC",
+  Parent: 19
+}, {
+  children: [],
+  Id: 130,
+  name: "SIdEIMSS",
+  Parent: 19
+}, {
+  children: [{
+  children: [],
+  Id: 146,
+  name: "SIMARTEC",
+  Parent: 136
+}],
+  Id: 136,
+  name: "SINDO-APM",
+  Parent: 19
+}, {
+  children: [],
+  Id: 147,
+  name: "SIROC",
+  Parent: 19
+}, {
+  children: [],
+  Id: 150,
+  name: "SISCOB COP RCV",
+  Parent: 19
+}, {
+  children: [],
+  Id: 151,
+  name: "SISCONET",
+  Parent: 19
+}, {
+  children: [],
+  Id: 152,
+  name: "SISEC",
+  Parent: 19
+}, {
+  children: [],
+  Id: 180,
+  name: "MaternIdad (SPPM)",
+  Parent: 19
+}, {
+  children: [],
+  Id: 187,
+  name: "SIMPD",
+  Parent: 19
+}, {
+  children: [{
+  children: [],
+  Id: 45,
+  name: "CVRO",
+  Parent: 190
+}, {
+  children: [],
+  Id: 74,
+  name: "ISSF",
+  Parent: 190
+}, {
+  children: [],
+  Id: 75,
+  name: "IVRO",
+  Parent: 190
+}],
+  Id: 190,
+  name: "Renovaciones",
+  Parent: 19
+}, {
+  children: [],
+  Id: 191,
+  name: "PTH",
+  Parent: 19
+}, {
+  children: [],
+  Id: 192,
+  name: "Domicilios Geograficos",
+  Parent: 19
+}, {
+  children: [],
+  Id: 193,
+  name: "Escritorio Virtual",
+  Parent: 19
+}, {
+  children: [],
+  Id: 194,
+  name: "NOVANORM",
+  Parent: 19
+}, {
+  children: [],
+  Id: 202,
+  name: "MovPat",
+  Parent: 19
+}, {
+  children: [],
+  Id: 87,
+  name: "PINC",
+  Parent: 19
+}, {
+  children: [{
+  children: [],
+  Id: 1012,
+  name: "Pagos CFDI",
+  Parent: 2001
+}],
+  Id: 2001,
+  name: "descargaCFDI",
+  Parent: 19
+}, {
+  children: [{
+  children: [],
+  Id: 1023,
+  name: "32D Motivo Negacion",
+  Parent: 2002
+}, {
+  children: [],
+  Id: 1024,
+  name: "32D RFC",
+  Parent: 2002
+}],
+  Id: 2002,
+  name: "EjecutaSincronizacion32D",
+  Parent: 19
+}, {
+  children: [{
+  children: [],
+  Id: 1002,
+  name: "Bajas ",
+  Parent: 2003
+}],
+  Id: 2003,
+  name: "generarBajasBDTU",
+  Parent: 19
+}, {
+  children: [{
+  children: [],
+  Id: 1003,
+  name: "Becarios",
+  Parent: 2004
+}],
+  Id: 2004,
+  name: "generarDBBecariosCabGpoBDTU",
+  Parent: 19
+}, {
+  children: [{
+  children: [],
+  Id: 1001,
+  name: "Asignacion NSS ",
+  Parent: 2005
+}],
+  Id: 2005,
+  name: "generarDBDitAsignacionNSS",
+  Parent: 19
+}, {
+  children: [{
+  children: [],
+  Id: 1013,
+  name: "Patrones",
+  Parent: 2006
+}],
+  Id: 2006,
+  name: "generarDBPatronesBDTU",
+  Parent: 19
+}, {
+  children: [{
+  children: [],
+  Id: 1014,
+  name: "Pensionados",
+  Parent: 2007
+}],
+  Id: 2007,
+  name: "generarDBPensionadosBDTU",
+  Parent: 19
+}, {
+  children: [{
+  children: [],
+  Id: 1006,
+  name: "Derechohabientes",
+  Parent: 2008
+}],
+  Id: 2008,
+  name: "generarDitDerechohabientesBDTU",
+  Parent: 19
+}, {
+  children: [{
+  children: [],
+  Id: 1015,
+  name: "Personas",
+  Parent: 2009
+}],
+  Id: 2009,
+  name: "generarDITPERSONA_INC",
+  Parent: 19
+}, {
+  children: [{
+  children: [],
+  Id: 1007,
+  name: "Direccion Particular",
+  Parent: 2010
+}, {
+  children: [],
+  Id: 1008,
+  name: "Forma contacto",
+  Parent: 2010
+}],
+  Id: 2010,
+  name: "generarDomicilioParticularBDTU",
+  Parent: 19
+}, {
+  children: [{
+  children: [],
+  Id: 1010,
+  name: "ModalIdades",
+  Parent: 2011
+}],
+  Id: 2011,
+  name: "generarModalIdadesBDTU",
+  Parent: 19
+}, {
+  children: [{
+  children: [],
+  Id: 1016,
+  name: "Prorrogas",
+  Parent: 2012
+}],
+  Id: 2012,
+  name: "generarProrrogasBDTU",
+  Parent: 19
+}, {
+  children: [{
+  children: [],
+  Id: 1022,
+  name: "UMF´s",
+  Parent: 2013
+}],
+  Id: 2013,
+  name: "generarUMFBDTU",
+  Parent: 19
+}, {
+  children: [{
+  children: [],
+  Id: 1021,
+  name: "UMF Domicilios",
+  Parent: 2014
+}],
+  Id: 2014,
+  name: "generarUMFDomiciliosBDTU",
+  Parent: 19
+}, {
+  children: [{
+  children: [],
+  Id: 1020,
+  name: "UMF Codigos Postales",
+  Parent: 2015
+}],
+  Id: 2015,
+  name: "generarUMFPostalesBDTU",
+  Parent: 19
+}, {
+  children: [{
+  children: [],
+  Id: 1005,
+  name: "COP Detalle",
+  Parent: 2016
+}, {
+  children: [],
+  Id: 1011,
+  name: "MUL Detalle",
+  Parent: 2016
+}, {
+  children: [],
+  Id: 1017,
+  name: "RCV Detalle",
+  Parent: 2016
+}, {
+  children: [],
+  Id: 1018,
+  name: "RFC RP",
+  Parent: 2016
+}, {
+  children: [],
+  Id: 1019,
+  name: "Total RFC",
+  Parent: 2016
+}],
+  Id: 2016,
+  name: "SemanaContact",
+  Parent: 19
+}],
+  Id: 19,
+  name: "BDTU",
+  Parent: ""
     };
 
     $('#chart-container').orgchart({
