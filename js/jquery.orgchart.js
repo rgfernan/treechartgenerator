@@ -23,6 +23,7 @@
     this.defaultOptions = {
       'nodeTitle': 'name',
       'nodeId': 'id',
+	  'nodeContent':'title',
       'toggleSiblingsResp': false,
       'visibleLevel': 999,
       'chartClass': '',
@@ -34,7 +35,7 @@
       'draggable': false,
       'direction': 't2b',
       'pan': false,
-      'zoom': false,
+      'zoom': true,
       'zoominLimit': 7,
       'zoomoutLimit': 0.5
     };
@@ -1243,6 +1244,8 @@
         .on('touchmove', this.touchmoveHandler.bind(this))
         .on('touchend', this.touchendHandler.bind(this));
     },
+	
+
     // create node
     createNode: function (data) {
       var that = this;
@@ -1260,7 +1263,7 @@
         $nodeDiv.append(opts.nodeTemplate(data));
       } else {
         $nodeDiv.append('<div class="title">' + data[opts.nodeTitle] + '</div>')
-          .append(typeof opts.nodeContent !== 'undefined' ? '<div class="content">' + (data[opts.nodeContent] || '') + '</div>' : '');
+          .append(typeof opts.nodeContent !== 'undefined' ? '<div class="content">' + (data[opts.nodeContent] || '<a href="#" class="diagrama" title="Ver Diagrama" data-toggle="tooltip" data-placement="bottom"><span class="glyphicon glyphicon-picture diagram"></span></a>') + '</div>' : '');
       }
       //
       var nodeData = $.extend({}, data);
@@ -1542,6 +1545,8 @@
         $chartContainer.find(selector).attr('href', canvas.toDataURL())[0].click();
       }
     },
+	
+	
     //
     export: function (exportFilename, exportFileextension) {
       var that = this;
@@ -1583,8 +1588,16 @@
     }
   };
 
+
   $.fn.orgchart = function (opts) {
     return new OrgChart(this, opts).init();
   };
+  
+  
+  
 
-}));
+
+})
+
+
+);
