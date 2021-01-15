@@ -20,10 +20,11 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-image: linear-gradient(90deg, rgb(70,136,71)20%) 10%, rgba(0, 0, 0, 0) 10%), linear-gradient(rgb(70,136,71)20%) 10%, rgba(0, 0, 0, 0) 10%);
+  background-image: linear-gradient(90deg, #e8c9d2, rgba(0, 0, 0, 0) 10%), linear-gradient(#e8c9d2, rgba(0, 0, 0, 0) 10%);
   background-size: 10px 10px;
   border: 1px dashed rgba(0,0,0,0);
   padding: 20px;
+  
 }
 
 .orgchart .hidden, .orgchart~.hidden {
@@ -131,23 +132,23 @@
 }
 
 .orgchart .lines .topLine {
-  border-top: 2px solid rgb(70,136,71);
+  border-top: 2px solid #7e1a3d;
 }
 
 .orgchart .lines .rightLine {
-  border-right: 1px solid rgb(70,136,71);
+  border-right: 1px solid #7e1a3d;
   float: none;
   border-radius: 0;
 }
 
 .orgchart .lines .leftLine {
-  border-left: 1px solid rgb(70,136,71);
+  border-left: 1px solid #7e1a3d;
   float: none;
   border-radius: 0;
 }
 
 .orgchart .lines .downLine {
-  background-color: rgb(70,136,71);
+  background-color: #7e1a3d;
   margin: 0 auto;
   height: 10px;
   width: 1.5px;
@@ -217,13 +218,13 @@
   padding: 2px;
   width: 150px;
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: bold;
   height: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  background-color: rgb(70,136,71);
+  background-color: #7e1a3d;
   color: #fff;
   border-radius: 4px 4px 0 0; 
 }
@@ -262,12 +263,12 @@
   box-sizing: border-box;
   padding: 2px;
   height: 30px;
-  font-size: 0.625rem;
-  border: 1px solid rgb(70,136,71);
-  border-radius: 0 0 4px 4px;
+  font-size: 0.75rem;
+  border: 1px solid #7e1a3d;
+  border-radius: 0 0 0 0;
   text-align: center;
   background-color: #fff;
-  color: #333;
+  color: #000;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
