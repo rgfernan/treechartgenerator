@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<title>Configuración de Extención</title>
+    <link rel="icon" href="img/logo.png"> 
+<!-- Style sheet -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Tableau Extension Library -->
+   <script type="text/javascript"  src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/tableau.extensions.1.latest.js"></script>    
+  <script type="text/javascript" src="js/jquery.orgchart.js"></script>
+  <script type="text/javascript" src="js/utilerias.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!-- Tableau Extension app JS -->
+    <script src="js/treeChartGeneratorDialog.js"></script>
+      
+</head>
+
+<body>
+<div class="container" style="max-width:600px">
+<div class="panel panel-default"> 
+            <div class="panel-heading" style='text-align: center'>
+                <h3 class="panel-title">Configuración de la Extensión</h3>
+            </div>			
+			 <div class="panel-body">
+			 <div class="row justify-content-center">
+                <div class="col-md-12">
+            <div class="form-group">
+                <label class="control-label">Hoja de Trabajo<span class="control-label">*</span>:</label>
+                <select name="HojaTrabajo" class="form-control" value="" id="selectWorksheet" required>                   
+                       <option disabled selected="selected">-- Ninguna Seleccionada --</option>                    
+                </select>               
+            </div>
+			 </div> 
+			 </div>
+			  <div class="row justify-content-center">
+                <div class="col-md-12">
+            <div class="form-group">
+                <label class="control-label">Selecciona Campo 1<span class="control-label">*</span>:</label>
+                <select name="Campo1" class="form-control"  id="selectCampo1" required>                               
+                </select>               
+            </div>
+			 </div> 
+			 </div>
+			  <div class="row justify-content-center">
+                <div class="col-md-12">
+            <div class="form-group">
+                <label class="control-label">Selecciona Campo 2<span class="control-label">*</span>:</label>
+                <select name="Campo2" class="form-control"  id="selectCampo2" required>                               
+                </select>               
+            </div>
+			 </div> 
+			 </div>
+			  <div class="row justify-content-center">
+                <div class="col-md-12">
+            <div class="form-group">
+                <label class="control-label">Selecciona Campo 3<span class="control-label">*</span>:</label>
+                <select name="Campo3" class="form-control"  id="selectCampo3" required>                               
+                </select>               
+            </div>
+			 </div> 
+			 </div>   
+       </div>
+	   <div class="panel-footer">
+	   		<div class="row justify-content-end">		
+                    <button type="button" class="btn btn-danger" id="cancel" title="Cancelar">Cancelar</button>
+                    <button type="button" class="btn btn-success" id="save" title="Guardar"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>&nbsp;Guardar</button>
+                </div>
+       </div> 
+   </div>
+   </div>
+</body>
+
+</html>
