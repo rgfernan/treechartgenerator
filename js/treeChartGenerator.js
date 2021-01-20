@@ -55,17 +55,16 @@ var showLabel;
 
     // Get all saved settings
     var worksheetName = tableau.extensions.settings.get("selectWorksheet");
-    var DimensionChosenColumn = tableau.extensions.settings.get("DimensionChosenColumn");
-    var MeasureChosenColumn = tableau.extensions.settings.get("MeasureChosenColumn");
-    DelimiterChosen = tableau.extensions.settings.get("DelimiterChosen");
-    showLabel = tableau.extensions.settings.get("ShowMeasureLabel");
+    //var DimensionChosenColumn = tableau.extensions.settings.get("DimensionChosenColumn");
+    //var MeasureChosenColumn = tableau.extensions.settings.get("MeasureChosenColumn");
+    //DelimiterChosen = tableau.extensions.settings.get("DelimiterChosen");
+    //showLabel = tableau.extensions.settings.get("ShowMeasureLabel");
 
-    HierType = tableau.extensions.settings.get("HierarchyType");
-    Level1 = tableau.extensions.settings.get("Level1");
-    Level2 = tableau.extensions.settings.get("Level2");
-    Level3 = tableau.extensions.settings.get("Level3");
-    Level4 = tableau.extensions.settings.get("Level4");
-    Level5 = tableau.extensions.settings.get("Level5");
+    //HierType = tableau.extensions.settings.get("HierarchyType");
+    Level1 = tableau.extensions.settings.get("selectCampo1");
+    Level2 = tableau.extensions.settings.get("selectCampo2");
+    Level3 = tableau.extensions.settings.get("selectCampo3");
+    
 
     if (worksheetName > ' ') {
       $('#wrapper').hide();
@@ -79,7 +78,7 @@ var showLabel;
         var sumarr = [];
         var data = [];
 
-        if (HierType == 'parent_child') {
+       /* if (HierType == 'parent_child') {
           // Loop sumdata and write out the selected dimension and measure values to sumarr
           for (var l1 = 0; l1 < sumdata.data.length; l1++) {
             var l2 = 0;
@@ -107,7 +106,8 @@ var showLabel;
           var rootz = stratify(data)
             .sort(function (a, b) { return (a.height - b.height) || a.id.localeCompare(b.id); });
         }
-        else {
+        else {*/
+		//{
           for (var l1 = 0; l1 < sumdata.data.length; l1++) {
             var l2 = 0;
             sumarr.push(['', '', '', '', '', '']);
@@ -121,47 +121,22 @@ var showLabel;
               if (current_value.fieldName == Level3) {
                 sumarr[l1][2] = sumdata.data[l1][l2].formattedValue;
               }
-              if (current_value.fieldName == Level4) {
-                sumarr[l1][3] = sumdata.data[l1][l2].formattedValue;
-              }
-              if (current_value.fieldName == Level5) {
-                sumarr[l1][4] = sumdata.data[l1][l2].formattedValue;
-              }
-              if (current_value.fieldName == MeasureChosenColumn) {
-                sumarr[l1][5] = sumdata.data[l1][l2].value;
-              }
+              
               l2++;
             });
           }
           sumarr.sort();
 
           // Convert to JSON format
-          if (Level5 != 'NA') {
-            for (var l5 = 0; l5 < sumarr.length; l5++) {
-              data.push({ "level1": sumarr[l5][0], "level2": sumarr[l5][1], "level3": sumarr[l5][2], "level4": sumarr[l5][3], "level5": sumarr[l5][4], "value": sumarr[l5][5] });
-            }
-            const levels = ["level1", "level2", "level3", "level4"];
-            hierarchy = flatToHierarchy(data, levels, 'level5', 'value');
-          }
-          else {
-            if (Level4 != 'NA') {
-              for (var l5 = 0; l5 < sumarr.length; l5++) {
-                data.push({ "level1": sumarr[l5][0], "level2": sumarr[l5][1], "level3": sumarr[l5][2], "level4": sumarr[l5][3], "value": sumarr[l5][5] });
-              }
-              const levels = ["level1", "level2", "level3"];
-              hierarchy = flatToHierarchy(data, levels, 'level4', 'value');
-            }
-            else {
+          
               for (var l5 = 0; l5 < sumarr.length; l5++) {
                 data.push({ "level1": sumarr[l5][0], "level2": sumarr[l5][1], "level3": sumarr[l5][2], "value": sumarr[l5][5] });
               }
               const levels = ["level1", "level2"];
               hierarchy = flatToHierarchy(data, levels, 'level3', 'value');
 
-            }
-          }
           var rootz = hierarchy;
-        }
+        //}
         drawChart(rootz, worksheet, DimensionChosenColumn);
       });
     }
